@@ -1,9 +1,8 @@
-src/
+dist/
+node_modules/
 test/
-.gitignore
+.prettierignore
 .prettierrc
 eslint.config.mjs
-nest-cli.json
+package-lock.json
 README.md
-tsconfig.build.json
-tsconfig.json

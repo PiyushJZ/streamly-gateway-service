@@ -5,7 +5,6 @@
   "author": "Piyush Jain",
   "private": true,
   "scripts": {
-    "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
@@ -23,9 +22,9 @@
   "dependencies": {
     "@grpc/grpc-js": "^1.13.4",
     "@grpc/proto-loader": "^0.7.15",
-    "@lib/cache": "1.0.0",
-    "@lib/common": "1.0.0",
-    "@lib/config": "1.0.0",
+    "@lib/cache": "=1.0.0",
+    "@lib/common": "=1.0.0",
+    "@lib/config": "=1.0.0",
     "@nestjs/common": "^11.0.1",
     "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^11.1.2",

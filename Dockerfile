@@ -1,9 +1,21 @@
-FROM chainguard/node:latest
+# ---- Step 1: Build ----
+FROM chainguard/node:latest AS build
 
 WORKDIR /app
-
 COPY . .
+RUN npm install
+RUN npm run build
 
-EXPOSE 8080
+# # ---- Step 2: Production ----
+# FROM chainguard/node:latest AS prod
 
-ENTRYPOINT [ "node", "dist/index" ]
+# WORKDIR /app
+
+# COPY --from=build /app/dist ./dist
+# COPY --from=build /app/package*.json ./
+
+# RUN npm i --omit=dev
+
+# EXPOSE 8080
+
+# ENTRYPOINT [ "node", "dist/index" ]
