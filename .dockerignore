@@ -1,6 +1,7 @@
 dist/
 node_modules/
 test/
+.npmrc
 .prettierignore
 .prettierrc
 eslint.config.mjs

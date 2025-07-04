@@ -3,6 +3,7 @@ FROM chainguard/node:latest AS build
 
 WORKDIR /app
 COPY . .
+RUN npm config set registry http://172.21.0.2:4873
 RUN npm install
 RUN npm run build
 
